@@ -1,0 +1,121 @@
+@import 'src/assets/scss/varible.scss';
+
+.login {
+  // width: 100%;
+  background: #F7FCFF;
+  display: flex;
+  // overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  @include wh(100%, 100vh);
+
+  .main {
+    width: 1400px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 16px 42px 0px rgba(4, 77, 128, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .leftContent {
+    width: 550px;
+    background: linear-gradient(45deg, #0896F7 0%, #00E2CC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .introduct {
+      height: 100%;
+      @include flexContainer(center);
+
+      section {
+        @include style(36px, #fff);
+        margin-top: 127px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .rightContent {
+    width: 890px;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rightContentbox {
+      width: 550px;
+
+      .slogan {
+        line-height: 87px;
+        @include style(72px, #06121A);
+
+        p:last-of-type {
+          font-size: 40px;
+          padding-top: 40px;
+        }
+
+        flex-shrink:10;
+      }
+
+      .from {
+        width: 100%;
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        .fromContent {
+          width: 550px;
+        }
+
+        .label {
+          padding-left: 6px;
+          color: #000000;
+          font-size: 16px;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        .textBg {
+          background: #F0F3F7;
+        }
+
+        .loginInput {
+          background: #F0F3F7;
+          height: 60px !important;
+
+          input {
+            background: #F0F3F7 !important;
+          }
+        }
+
+        .submit {
+          width: 100%;
+          height: 60px;
+          border-radius: 12px;
+          margin-top: 20px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .main {
+    width: 1200px !important;
+
+    .leftContent {
+      width: 458px !important;
+    }
+
+    .rightContent {
+      width: 742px !important;
+    }
+  }
+}
